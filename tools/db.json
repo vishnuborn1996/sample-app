@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "username": "johndoe@test.com",
+      "password": "12345678"
+    },
+    {
+      "username": "monica@test.com",
+      "password": "12345678"
+    }
+  ]
+}
