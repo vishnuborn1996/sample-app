@@ -38,8 +38,9 @@ server.post("/auth/login", (req, res) => {
     res.status(status).json({ status, message });
     return;
   }
+  let user = getUserDetails(email);
   const access_token = createToken({ email, password });
-  res.status(200).json({ access_token, email });
+  res.status(200).json({ access_token, email, name: user.name });
 });
 
 server.use(/^(?!\/auth).*$/, (req, res, next) => {
@@ -90,4 +91,9 @@ function isAuthenticated({ email, password }) {
       (user) => user.email === email && user.password === password
     ) !== -1
   );
+}
+
+function getUserDetails(email) {
+  let user = userdb.users.find((it) => it.email === email);
+  return user;
 }
