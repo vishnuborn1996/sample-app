@@ -7,7 +7,7 @@ const LoginForm = (props) => {
         <label htmlFor="exampleInputEmail1">Email address</label>
         <input
           type="email"
-          className="form-control"
+          className={"form-control" + (props.errors.email ? " is-invalid" : "")}
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
           placeholder="Enter email"
@@ -23,7 +23,9 @@ const LoginForm = (props) => {
         <label htmlFor="exampleInputPassword1">Password</label>
         <input
           type="password"
-          className="form-control"
+          className={
+            "form-control" + (props.errors.password ? " is-invalid" : "")
+          }
           id="exampleInputPassword1"
           placeholder="Password"
           onChange={props.handleChange}

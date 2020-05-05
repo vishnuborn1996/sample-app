@@ -31,3 +31,8 @@ export const login = (payload) => {
     return { type: actionType.LOGIN_FAILURE, error };
   }
 };
+
+export const logout = () => {
+  localStorage.removeItem("user");
+  return { type: actionType.LOGOUT };
+};
