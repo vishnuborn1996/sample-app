@@ -8,5 +8,25 @@
       "username": "monica@test.com",
       "password": "12345678"
     }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "title": "React with redux",
+      "author": "Neethu",
+      "technology": "react"
+    },
+    {
+      "id": 3,
+      "title": "React and thunk",
+      "author": "Perfecto",
+      "technology": "react"
+    },
+    {
+      "id": 2,
+      "title": "React with flux",
+      "author": "Vishnu",
+      "technology": "react"
+    }
   ]
 }

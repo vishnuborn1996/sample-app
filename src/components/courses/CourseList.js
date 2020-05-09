@@ -1,0 +1,30 @@
+import React from "react";
+
+const CourseList = ({ courses }) => {
+  return (
+    <table className="table">
+      <thead>
+        <tr>
+          <th>
+            Title <i class="fa fa-fw fa-sort"></i>
+          </th>
+          <th>Author </th>
+          <th>Technology</th>
+        </tr>
+      </thead>
+      <tbody>
+        {courses.map((course) => {
+          return (
+            <tr key={course.id}>
+              <td>{course.title}</td>
+              <td>{course.author}</td>
+              <td>{course.technology}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  );
+};
+
+export default CourseList;

@@ -4,6 +4,7 @@ import HomePage from "./home/HomePage";
 import { Router, Route, Switch, Redirect } from "react-router-dom";
 import { PrivateRoute } from "./PrivateRoute";
 import { history } from "../utils/history";
+import CoursesPage from "./courses/CoursesPage";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
             <Switch>
               <PrivateRoute exact path="/" component={HomePage} />
               <Route path="/login" component={LoginPage} />
+              <Route path="/courses" component={CoursesPage} />
               <Redirect from="*" to="/" />
             </Switch>
           </Router>
