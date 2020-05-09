@@ -6,6 +6,7 @@ export const loadCourses = () => {
   var user = JSON.parse(localStorage.getItem("user"));
   debugger;
   return (dispatch) => {
+    dispatch(load());
     const requestOptions = {
       method: "GET",
       headers: {
@@ -25,7 +26,10 @@ export const loadCourses = () => {
     );
   };
 
+  function load() {
+    return { type: actionType.LOAD_COURSES };
+  }
   function success(payload) {
-    return { type: actionType.LOAD_COURSES, courses: payload };
+    return { type: actionType.LOAD_COURSES_SUCCESS, courses: payload };
   }
 };

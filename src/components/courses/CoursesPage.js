@@ -2,11 +2,13 @@ import React, { useEffect } from "react";
 import CourseList from "./CourseList";
 import { loadCourses } from "../../action/courses.action";
 import { connect } from "react-redux";
+import Spinner from "../common/Spinner";
 
 const mapStateToProps = (state) => {
   debugger;
   return {
     courses: state.courses.courses,
+    isLoading: state.courses.isLoading,
   };
 };
 
@@ -19,7 +21,7 @@ const CoursesPage = (props) => {
   return (
     <>
       <h2>Courses</h2>
-      <CourseList courses={props.courses} />
+      {props.isLoading ? <Spinner /> : <CourseList courses={props.courses} />}
     </>
   );
 };
