@@ -18,6 +18,8 @@ export function courses(state = initialState, action) {
         courses: [...state.courses, ...action.courses],
         isLoading: false,
       };
+    case actionType.LOGOUT:
+      return initialState;
     default:
       return state;
   }
