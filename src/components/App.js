@@ -8,20 +8,15 @@ import CoursesPage from "./courses/CoursesPage";
 
 const App = () => {
   return (
-    <div className="jumbotron">
-      <div className="container">
-        <div className="col-md-8 offset-md-2"></div>
-        <div className="col-lg-8 offset-lg-2">
-          <Router history={history}>
-            <Switch>
-              <PrivateRoute exact path="/" component={HomePage} />
-              <Route path="/login" component={LoginPage} />
-              <Route path="/courses" component={CoursesPage} />
-              <Redirect from="*" to="/" />
-            </Switch>
-          </Router>
-        </div>
-      </div>
+    <div className="">
+      <Router history={history}>
+        <Switch>
+          <PrivateRoute exact path="/" component={HomePage} />
+          <Route path="/login" component={LoginPage} />
+          <PrivateRoute path="/courses" component={CoursesPage} />
+          <Redirect from="*" to="/" />
+        </Switch>
+      </Router>
     </div>
   );
 };

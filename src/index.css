@@ -1,5 +1,12 @@
-.center {
-  margin: auto;
-  width: 40%;
-  padding: 10px;
+.login-card {
+  position: absolute;
+  left: 33%;
+  top: 26%;
+  /* vertical-align: middle; */
+  width: 28%;
+  height: 41%;
+  border: aquamarine;
+  border-style: groove;
+  padding: 37px;
+  overflow: hidden;
 }

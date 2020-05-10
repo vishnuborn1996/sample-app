@@ -48,7 +48,7 @@ const LoginPage = (props) => {
   };
 
   return (
-    <>
+    <div className="login-card">
       <h2>Login </h2>
       <LoginForm
         handleChange={handleChange}
@@ -57,7 +57,7 @@ const LoginPage = (props) => {
         handleSubmit={handleSubmit}
         errors={errors}
       />
-    </>
+    </div>
   );
 };
 
